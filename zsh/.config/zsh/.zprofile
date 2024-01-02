@@ -1,0 +1,6 @@
+[ -n "$TERM_SESSION_ID" ] || export TERM_SESSION_ID="$(uuidgen)"
+export SHELL_SESSION_DIR=$XDG_STATE_HOME/zsh/sessions
+export SHELL_SESSION_FILE=$SHELL_SESSION_DIR/$TERM_SESSION_ID
+
+export LESSHISTFILE=$XDG_CACHE_HOME/less/history
+export NODE_REPL_HISTORY=$XDG_CACHE_HOME/node/history
