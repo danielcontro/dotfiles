@@ -6,6 +6,7 @@ return {
       python = { "autopep8" },
       ocaml = { "ocamlformat" },
       rust = { "rustfmt" },
+      sql = { "sqlfmt" },
       tex = { "latexindent" },
     },
   },
