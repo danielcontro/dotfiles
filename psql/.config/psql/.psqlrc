@@ -1,0 +1,17 @@
+\set QUIET 1
+
+\set HISTFILE ~/.cache/psql/history/:DBNAME
+
+\set PROMPT1 '%M:%> %n@%/%R%#%x: '
+\set PROMPT2 '%#%x: '
+\pset null '[null]'
+\timing
+\x auto
+\set VERBOSITY verbose
+\set COMP_KEYWORD_CASE upper
+
+\set QUIET 0
+
+\echo 'Type :extensions to see the available extensions. \n'
+\echo 'Type \\q to exit. \n'
+\set extensions 'select * from pg_available_extensions;'
