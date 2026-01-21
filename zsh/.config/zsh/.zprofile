@@ -4,3 +4,5 @@ export SHELL_SESSION_FILE=$SHELL_SESSION_DIR/$TERM_SESSION_ID
 
 export LESSHISTFILE=$XDG_CACHE_HOME/less/history
 export NODE_REPL_HISTORY=$XDG_CACHE_HOME/node/history
+
+export PATH="$HOME/.elan/bin:$PATH"

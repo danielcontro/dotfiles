@@ -1,26 +1,64 @@
 return {
-  "nvim-neorg/neorg",
-  build = ":Neorg sync-parsers",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  ft = ".norg",
-  cmd = "Neorg",
-  config = function()
-    require("neorg").setup({
-      load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        -- ["core.completion"] = {}, -- Adds pretty icons to your documents
-        ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              default = "~/neorg/default",
-              planning = "~/neorg/planning",
-              notes = "~/neorg/notes",
-              uni = "~/neorg/uni",
-            },
-          },
-        },
-      },
-    })
-  end,
+  -- lazy.nvim
+  -- {
+  --   "folke/snacks.nvim",
+  --   ---@type snacks.Config
+  --   opts = {
+  --     image = {},
+  --   },
+  -- },
+  -- {
+  --   "chipsenkbeil/org-roam.nvim",
+  --   -- tag = "0.1.1",
+  --   dependencies = {
+  --     {
+  --       "nvim-orgmode/orgmode",
+  --       -- tag = "0.3.7",
+  --       dependencies = {
+  --         "nvim-orgmode/org-bullets.nvim",
+  --         "danilshvalov/org-modern.nvim",
+  --       },
+  --       event = "VeryLazy",
+  --       ft = { "org" },
+  --       opts = {
+  --         org_agenda_files = "~/Org/**",
+  --         org_default_notes_file = "~/Org/refile.org",
+  --         mappings = {
+  --           prefix = "<Localleader>o",
+  --         },
+  --         ui = {
+  --           menu = {
+  --             handler = function(data)
+  --               require("org-modern.menu")
+  --                 :new({
+  --                   window = {
+  --                     margin = { 1, 0, 1, 0 },
+  --                     padding = { 0, 1, 0, 1 },
+  --                     title_pos = "center",
+  --                     border = "single",
+  --                     zindex = 1000,
+  --                   },
+  --                   icons = {
+  --                     separator = "",
+  --                   },
+  --                 })
+  --                 :open(data)
+  --             end,
+  --           },
+  --         },
+  --       },
+  --     },
+  --   },
+  --   event = "VeryLazy",
+  --   ft = { "org" },
+  --   opts = {
+  --     directory = "~/Org/notes",
+  --     org_files = {
+  --       "~/Org/refile.org",
+  --     },
+  --     bindings = {
+  --       prefix = "<Localleader>n",
+  --     },
+  --   },
+  -- },
 }
